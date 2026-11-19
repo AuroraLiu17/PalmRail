@@ -18,7 +18,7 @@
 ./gradlew --no-daemon :app:testDebugUnitTest :app:assembleRelease
 ```
 
-没有本地签名配置时，Release 产物为 `app/build/outputs/apk/release/app-release-unsigned.apk`。签名密钥及 `.signing/release.properties` 由应用所有者在本机管理，不属于仓库内容；云端签名须由发布服务提供。
+本发布工程不配置 Release 签名，也不读取本地签名属性文件；Release 产物为 `app/build/outputs/apk/release/app-release-unsigned.apk`，由 PICO Vibe Lab 统一签名。签名密钥及密码不得提交到仓库。
 
 ## 公开依赖与发布构建
 

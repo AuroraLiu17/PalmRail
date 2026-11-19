@@ -1,5 +1,3 @@
-import java.util.Properties
-
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -21,21 +19,8 @@ android {
         ndk { abiFilters.add("arm64-v8a") }
     }
 
-    val releaseCredentials = Properties().apply {
-        val credentialsFile = rootProject.file(".signing/release.properties")
-        if (credentialsFile.exists()) credentialsFile.inputStream().use { load(it) }
-    }
-    signingConfigs {
-        if (releaseCredentials.isNotEmpty()) create("trialRelease") {
-            storeFile = rootProject.file(releaseCredentials.getProperty("storeFile"))
-            storePassword = releaseCredentials.getProperty("storePassword")
-            keyAlias = releaseCredentials.getProperty("keyAlias")
-            keyPassword = releaseCredentials.getProperty("keyPassword")
-        }
-    }
     buildTypes {
         release {
-            signingConfig = signingConfigs.findByName("trialRelease")
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
