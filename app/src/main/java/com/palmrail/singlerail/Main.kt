@@ -18,6 +18,8 @@ import androidx.compose.ui.unit.sp
 import com.palmrail.singlerail.sdk.*
 import com.pico.spatial.core.ecs.Entity
 import com.pico.spatial.core.ecs.TransformComponent
+import com.pico.spatial.core.ecs.AccessibilityComponent
+import com.pico.spatial.ui.foundation.content.setAccessibilityActions
 import com.pico.spatial.core.math.Vector3
 import com.pico.spatial.ui.design.*
 import com.pico.spatial.ui.foundation.content.SpatialView
@@ -259,7 +261,14 @@ private fun RailStage(
             initializing = true
             try {
                 probe.attach(content, real = !simulation, studio = studio)
-                attachments.entity("singlerail.guide")?.let(probe::attachGuide)
+                attachments.entity("singlerail.guide")?.let { guide ->
+                    // The owner names the panel; its text and buttons retain native semantics.
+                    guide.components.set(AccessibilityComponent(label = "轨道操作与结果提示", value = "可见").apply {
+                        isAccessibilityElement = true
+                    })
+                    content.setAccessibilityActions(entity = guide, semanticId = "singlerail.guide") {}
+                    probe.attachGuide(guide)
+                }
                 ready = true
                 Log.i(logTag, "SCENE_READY ${spec.rail.asset}")
             } catch (e: CancellationException) { throw e }

@@ -2,7 +2,7 @@
 
 此工程在 `AuroraLiu17/PalmRail` 的独立 `trial` 分支维护。该分支的仓库根目录就是试玩版 Android 工程；主应用在其独立分支维护。不要将试玩版根目录直接合并进主应用。
 
-当前版本：`1.9.7-trial`（versionCode 29）。包名：`com.palmrail.singlerail`。使用 Kotlin、PICO Spatial SDK 6.4.0，要求 Android API 35 及相匹配的 PICO OS/Spatial 运行时。
+当前版本：`1.9.7-trial`（versionCode 29）。包名：`com.palmrail.singlerail`。使用 Kotlin、PICO Spatial SDK 6.2.8，要求 Android API 35 及相匹配的 PICO OS/Spatial 运行时。
 
 ## 玩法
 
@@ -20,11 +20,13 @@
 
 没有本地签名配置时，Release 产物为 `app/build/outputs/apk/release/app-release-unsigned.apk`。签名密钥及 `.signing/release.properties` 由应用所有者在本机管理，不属于仓库内容；云端签名须由发布服务提供。
 
-## 云端构建状态
+## 公开依赖与发布构建
 
-本次按用户授权上传 1.9.7 源码。原工程仍声明开发内网 Maven 源，Spatial SDK 6.4.0 在当前配置的公开 Volcengine Maven 仓库尚不可匿名获取。因此，本机缓存构建通过不代表 VibeLab 能在空缓存环境构建。
+当前版本已适配公开可下载的 Spatial SDK 6.2.8，移除开发内网 Maven 源。依赖仅来自 Google Maven、Maven Central、Gradle Plugin Portal 和 PICO 的公开 Volcengine Maven 仓库。
 
-在确认官方公开 SDK 6.4.0 依赖来源之前，保持云端构建待验证；不要上传本机缓存或 SDK 私有二进制，也不要自动降级 SDK。后续发布配置和宣传素材在独立审核后补齐。
+已用全新 Gradle 缓存、空 Maven local、无凭据和无 Node 的环境完成 Debug/Release 构建与 21 项单元测试。发布前还会对最终提交输入重复验证。运行时资源、120Hz物理、完整入轨及终点撞片规则、真实眼手输入、Mixed透视、20%应用补光和音效保持原实现；提示面板补齐系统可读的语义名称，未新增代理控件或玩法动作。
+
+在Swan上使用独立包名的Debug验证包进行动态回归，避免覆盖开发中的配色预览。模拟握持回归与真实佩戴手感、眼动完成率、实际听感和不同环境下的金属观感分别记录，不由编译通过推定。
 
 ## 维护边界
 

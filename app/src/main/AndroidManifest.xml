@@ -16,6 +16,12 @@
         android:theme="@style/Theme.PalmRailSingleRailTheme"
         tools:targetApi="31">
 
+        <!-- Declare the capabilities already implemented by the trial. -->
+        <meta-data android:name="handtracking" android:value="1" />
+        <meta-data android:name="picovr.software.eye_tracking" android:value="true" />
+        <meta-data android:name="enable_vst" android:value="1" />
+        <meta-data android:name="controller" android:value="1" />
+
         <activity
             android:name=".platform.LaunchActivity"
             android:launchMode="singleTask"

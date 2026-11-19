@@ -1,0 +1,37 @@
+app:
+  id: "7709404337130356776"
+  name: "掌上轨道-试玩版"
+  slogan: "伸手转动摇柄，让钢球沿空间轨道抵达终点。"
+  description: "掌上轨道-试玩版是一段围绕木质轨道、金属钢球与手摇机关展开的空间挑战。起点、抬升轨道和终点悬在眼前，你通过真实手部动作完成放球、抬升与送达的过程，在直接操控中观察钢球的运动。
+
+
+    伸手按下起点红色按钮，或注视按钮完成确认，即可释放钢球。握住摇柄并转动，让机关带动钢球沿轨道抬升；停摇、松手和再次抓握会影响机关的运动。观察钢球的位置，掌握节奏，将它送向出口和终点。
+
+
+    • 直接交互：支持手部操作、注视放球及已接入的手柄输入。
+
+    • 动态运动：钢球通过实际物理碰撞与轨道交互，保留抬升、回落和交接过程。
+
+    • 完成反馈：钢球完整进入终点并实际撞击末端金属片后，响铃并显示成功提示。
+
+    • 空间呈现：保留木纹、金属材质、悬木背景与操作说明，使用 Mixed 空间场景。
+
+
+    当前为独立试玩关卡，适合体验空间机关、直接输入和动态钢球的组合玩法。请在安全的可活动范围内体验。"
+  tags: [ "休闲益智" ]
+  category: "game"
+  icon: "assets/icon.jpg"
+  landscape: "assets/landscape.png"
+  detail_images: [ "assets/detail-1.png", "assets/detail-2.png", "assets/detail-3.png", "assets/detail-4.png", "assets/detail-5.png" ]
+  videos: [ { "file": "assets/demo.mp4", "cover": "assets/demo-cover.png" } ]
+version:
+  name: "1.9.7-trial"
+  notes: "本版适配公开可获取的 PICO Spatial SDK 6.2.8，统一使用外网 Maven 依赖。保留起点按钮与注视放球、抓握摇柄、动态钢球、终点真实撞片及铃声；维持 Mixed 场景、固定补光与已有音效。补齐操作提示面板的系统可读信息。发布素材采用用户实机录屏整理，加入简短中文配音和说明字幕。"
+build:
+  repo_url: "https://github.com/AuroraLiu17/PalmRail"
+  repo_visibility: "public"
+  tech_stack: "android_spatial"
+  ai_tool: "Codex CLI"
+  ai_model: "GPT-6"
+  features: [ "hand_tracking", "eye_tracking", "mixed_reality", "controller_support" ]
+  teammates: []
