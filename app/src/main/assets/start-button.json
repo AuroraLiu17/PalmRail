@@ -1,0 +1,21 @@
+{
+  "hitboxSizeMeters": [0.048, 0.020, 0.048],
+  "pressMeters": 0.008,
+  "travelInSeconds": 0.075,
+  "holdSeconds": 0.085,
+  "returnSeconds": 0.085,
+  "dwellDelaySeconds": 0.4,
+  "dwellFillSeconds": 1.0,
+  "dwellGraceSeconds": 0.12,
+  "dwellRearmSeconds": 0.25,
+  "maxEyeFrameAgeSeconds": 0.15,
+  "gazeLogIntervalSeconds": 1.0,
+  "eyeMaxMeters": 3.0,
+  "gazeCapDepthMeters": 0.019,
+  "gazeCapRadiusMeters": 0.026,
+  "gazeFaceDepthMeters": 0.003,
+  "gazeFaceRadiusMeters": 0.034,
+  "ringRadiusMeters": 0.03,
+  "ringMarkerRadiusMeters": 0.00155,
+  "ringSegments": 36
+}

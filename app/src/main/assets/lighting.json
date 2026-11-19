@@ -1,0 +1,37 @@
+{
+  "asset": "rail-neutral-studio.exr",
+  "cubemapFaceSize": 128,
+  "intensityExponent": 1.6,
+  "directLights": [
+    {
+      "name": "studio.key",
+      "eulerDegrees": [
+        -24,
+        -27,
+        0
+      ],
+      "intensity": 1050
+    },
+    {
+      "name": "studio.fill",
+      "eulerDegrees": [
+        12,
+        35,
+        0
+      ],
+      "intensity": 520
+    },
+    {
+      "name": "studio.rim",
+      "eulerDegrees": [
+        -35,
+        154,
+        0
+      ],
+      "intensity": 280
+    }
+  ],
+  "defaultGain": 0.2,
+  "schemaVersion": 2,
+  "environmentScale": 0.001
+}

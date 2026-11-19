@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "guideText": "按下/注视红色按钮开始\n摇动手柄将小球送至终点",
+  "guideWidthDp": 560,
+  "guideAboveBoardMeters": 0.2,
+  "guideForwardMeters": 0.045,
+  "guideFontSp": 22,
+  "successFontSp": 34,
+  "successText": "你成功啦！",
+  "startYawDegrees": 20,
+  "startLateralBiasMeters": 0.004,
+  "goalRightMeters": 0.018,
+  "goalDownMeters": 0.075,
+  "neutralFillEnabled": true,
+  "flightLogSeconds": 0.025,
+  "startGapMeters": 0.016,
+  "guideBackgroundOpacity": 0.7,
+  "guideLineHeightSp": 36,
+  "successLineHeightSp": 44
+}
